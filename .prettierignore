@@ -1,0 +1,13 @@
+**/.next
+**/logs
+**/.git
+**/.idea
+**/.gitignore
+**/.svn
+**/.hg
+**/node_modules
+**/package.json
+**/package-lock.json
+**/.env
+**/.env.default
+docker-compose.yml

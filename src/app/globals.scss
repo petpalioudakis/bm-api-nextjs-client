@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  @apply cursor-pointer underline hover:no-underline hover:opacity-75;
+}
+
+table {
+  @apply bg-white;
+}
+th,
+td {
+  @apply border-b border-gray-300 p-2 px-3;
+}
+th {
+  @apply border-b-2 border-t bg-gray-100 text-left align-bottom;
+  min-width: 3em;
+}
+tr:last-of-type td {
+  @apply border-b-0;
+}
+label {
+  @apply text-gray-600;
+}
+input[type='text'],
+input[type='number'],
+select,
+button,
+div.select-input-control {
+  @apply rounded border-gray-300 hover:border-black;
+  &:disabled {
+    @apply hover:border-gray-300;
+  }
+}
+input[type='text'],
+input[type='number'],
+select,
+button {
+  @apply py-1.5;
+}
+button,
+.link-button {
+  @apply cursor-pointer rounded p-2 px-4 transition;
+}
+input[type='submit'] {
+  @extend button;
+  @apply min-w-[8em] bg-black text-white hover:bg-gray-600;
+}
+.field-group,
+.label-value-pair {
+  @apply grid grid-cols-1 gap-2;
+  & > *:nth-child(1) {
+    @apply font-bold capitalize text-gray-600;
+  }
+  &.horizontal {
+    @apply items-center sm:grid-cols-6;
+    & > * {
+      @apply col-span-4;
+    }
+    & > *:nth-child(1) {
+      @apply col-span-2;
+    }
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animated-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
